@@ -11,4 +11,9 @@ describe("Student controller suite",() =>{
   test.each(studentsEmail)("2.%#) Test getStudentsEmail", (email) => {
     expect(email).toMatch("@visualpartnership.xyz");
   });
+  test("3) Credits above 500", ()=> {
+    const studentsList = StudentController.getStudentsCredits(500);
+    const above500 = studentsList.every((student) => student.credits >500);
+    expect(above500).toBe(true);
+  });
 });
