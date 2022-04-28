@@ -16,6 +16,6 @@ describe("StudentService test suite",() =>{
   test("3) Credits above 500", ()=> {
     const studentsList = StudentService.filterStudentsByCredits(students, 500);
     const above500 = studentsList.every((student) => student.credits >500);
-    expect(above500).toBe(false);
+    expect(above500).toBe(true);
   });
 });
