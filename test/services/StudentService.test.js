@@ -9,4 +9,13 @@ describe("Unit test suite",() =>{
     const allCertification = studentsList.every((student) => student.haveCertification == true);
     expect(allCertification).toBe(true);
   });
+  const studentsEmail = StudentService.getStudentsWithCertificationEmail(students);
+  test.each(studentsEmail)("2.%#) Emails from students with certification", (student) => {
+    expect(student).toMatch("@visualpartnership.xyz");
+  });
+  test("3) Credits above 500", ()=> {
+    const studentsList = StudentService.filterStudentsByCredits(students, 500);
+    const above500 = studentsList.every((student) => student.credits >500);
+    expect(above500).toBe(true);
+  });
 });
