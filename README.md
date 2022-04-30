@@ -70,11 +70,13 @@ Para acceder a la documentación de los endpoints, da click en el siguiente link
 
 El uso de esto es muy sencillo, desde el navegador simplemente utilizas los endpoints que se vieron en el paso anterior.
 
+
 ![Pasos a llevar a cabo](data/steps.gif)
 
 De igual manera puedes utilizar herramientas como Postman para acceder, a los *endpoints*
 
 ![Pasos en postman](data/post-man-method.gif)
+
 
 
 
